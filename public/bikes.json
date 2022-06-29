@@ -1,0 +1,19 @@
+{
+  "bikes": [
+    {
+      "id": 1,
+      "brand": "Yeti",
+      "model": "SB100"
+    },
+    {
+      "id": 2,
+      "brand": "Yeti",
+      "model": "SB130"
+    },
+    {
+      "id": 3,
+      "brand": "Cinelli",
+      "model": "Trackshark"
+    }
+  ]
+}
