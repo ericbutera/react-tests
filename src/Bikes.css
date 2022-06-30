@@ -1,8 +1,8 @@
-#bikes img {
+.bikes .view {
   width: 150px;
 }
 
-#bikes li {
+.bikes li {
   list-style: none;
   display: inline;
 }

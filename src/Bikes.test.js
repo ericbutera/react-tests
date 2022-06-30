@@ -1,23 +1,9 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-
+import { render, screen } from "@testing-library/react";
 import Bikes from "./Bikes";
 
 // https://testing-library.com/docs/react-testing-library/cheatsheet
 // https://reactjs.org/docs/testing-recipes.html
-
-let container = null;
-beforeEach(() => {
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
+// https://github.com/testing-library/react-testing-library#complex-example
 
 it("renders user data", async () => {
   const bike = {
@@ -36,12 +22,10 @@ it("renders user data", async () => {
       Promise.resolve({ json: () => Promise.resolve(bikes) })
     );
 
-  // Use the asynchronous version of act to apply resolved promises
-  await act(async () => {
-    render(<Bikes id="1" />, container);
-  });
+  const container = render(<Bikes id="1" />);
 
-  expect(container.textContent).toContain(bike.model);
+  const yeti = await screen.findByText(/SB100/);
+  expect(yeti).toBeInTheDocument();
 
   // remove the mock to ensure tests are completely isolated  global.fetch.mockRestore();});
   global.fetch.mockRestore();

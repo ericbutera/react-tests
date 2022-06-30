@@ -18,12 +18,12 @@ function Bikes() {
   }, []);
 
   return (
-    <ul id="bikes">
+    <ul className="bikes">
       {bikes.map((item) => (
         <li key={item.id}>
-          <span>{item.brand}</span>
-          <span>{item.model}</span>
-          <img src={"/i/" + item.image} alt="{item.model}" />
+          <span className="brand">{item.brand}</span>
+          <span className="model">{item.model}</span>
+          <img src={"/i/" + item.image} alt={item.model} className="view" />
         </li>
       ))}
     </ul>
