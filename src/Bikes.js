@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
-import "./Bikes.css";
+import React, { useState, useEffect } from 'react'
+import './Bikes.css'
 
 function Bikes() {
-  const [bikes, setBikes] = useState([]);
+  const [bikes, setBikes] = useState([])
 
   useEffect(() => {
     // https://reactjs.org/docs/faq-ajax.html
     const fetchData = async () => {
-      fetch("/bikes.json")
-        .then((response) => response.json())
-        .then((data) => {
-          setBikes(data.bikes);
-        });
-    };
+      fetch('/bikes.json')
+        .then(response => response.json())
+        .then(data => {
+          setBikes(data.bikes)
+        })
+    }
 
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   return (
     <ul className="bikes">
-      {bikes.map((item) => (
+      {bikes.map(item => (
         <li key={item.id}>
           <span className="brand">{item.brand}</span>
           <span className="model">{item.model}</span>
-          <img src={"/i/" + item.image} alt={item.model} className="view" />
+          <img src={'/i/' + item.image} alt={item.model} className="view" />
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default Bikes;
+export default Bikes

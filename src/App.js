@@ -1,5 +1,5 @@
-import Bikes from './Bikes.js';
-import './App.css';
+import Bikes from './Bikes.js'
+import './App.css'
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">TestExperiments</header>
       <Bikes />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
