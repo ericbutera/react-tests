@@ -19,6 +19,14 @@
       "type": "pwa-chrome",
       "urlFilter": "http://localhost:3000/*", // use urlFilter instead of url!
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
