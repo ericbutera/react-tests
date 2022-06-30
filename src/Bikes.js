@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Bikes.css';
 
 function Bikes() {
   const [bikes, setBikes] = useState([]);
@@ -17,11 +18,12 @@ function Bikes() {
   }, []);
 
   return (
-    <ul>
+    <ul id='bikes'>
       {bikes.map(item => (
         <li key={item.id}>
-          <div>{item.brand}</div>
-          <div>{item.model}</div>
+          <span>{item.brand}</span>
+          <span>{item.model}</span>
+          <img src={"/i/" + item.image} alt="{item.model}"/>
         </li>
       ))}
     </ul>

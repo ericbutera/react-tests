@@ -1,0 +1,8 @@
+#bikes img {
+  width: 150px;
+}
+
+#bikes li {
+  list-style: none;
+  display: inline;
+}

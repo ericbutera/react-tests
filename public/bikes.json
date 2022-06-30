@@ -3,17 +3,20 @@
     {
       "id": 1,
       "brand": "Yeti",
-      "model": "SB100"
+      "model": "SB100",
+      "image": "yeti-sb100.jpg"
     },
     {
       "id": 2,
       "brand": "Yeti",
-      "model": "SB130"
+      "model": "SB130",
+      "image": "yeti-sb130.jpg"
     },
     {
       "id": 3,
       "brand": "Cinelli",
-      "model": "Trackshark"
+      "model": "Trackshark",
+      "image": "cinelli-trackshark.jpg"
     }
   ]
 }
