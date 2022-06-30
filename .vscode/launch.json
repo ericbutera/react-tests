@@ -11,13 +11,14 @@
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
     },
+    // https://dev.to/zirkelc/debug-a-react-app-in-vscode-21ga
     {
-    "name": "Attach to Chrome",
-    "port": 9222,
-    "request": "attach",
-    "type": "pwa-chrome",
-    "urlFilter": "http://localhost:3000/*", // use urlFilter instead of url!
-    "webRoot": "${workspaceFolder}"
-}
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "pwa-chrome",
+      "urlFilter": "http://localhost:3000/*", // use urlFilter instead of url!
+      "webRoot": "${workspaceFolder}"
+    }
   ]
 }
